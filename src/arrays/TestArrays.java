@@ -11,13 +11,13 @@ public class TestArrays {
     public static void main(String[] args) {
 
         //Compare
-//        System.out.println(executeTestCompare());
+        System.out.println(executeTestCompare());
 
         //Mismatch
 //        System.out.println(executeTestMismatch());
 
         //Var
-        System.out.println(executeTestVar());
+//        System.out.println(executeTestVar());
     }
 
     /**
