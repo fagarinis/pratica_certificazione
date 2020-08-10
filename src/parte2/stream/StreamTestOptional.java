@@ -6,13 +6,27 @@ import java.util.stream.Stream;
 public class StreamTestOptional {
 
     public static void main(String[] args) {
+//        testOptionalOr();
         testOptionalOf();
+    }
+
+    static void testOptionalOr() {
+        Integer n = null;
+        //
+        Integer result = Optional.ofNullable(n)
+                // se il valore nell'optional precedente è presente returnalo
+                // altrimenti fornisci un optional con una funzione supplier
+                .or(() -> Optional.ofNullable(null))
+                // se il valore nell'optional precedente è presente
+                // returnalo altrimenti manda un eccezione NoSuchElementException
+                .orElseThrow();
+        System.out.println(result);
     }
 
     static void testOptionalOf() {
         Integer n = null;
         Integer x = Optional.ofNullable(n).orElse(5);
-        System.out.println(n);
+        System.out.println(x);
     }
 
     static void testOptionalOfNullable() {
