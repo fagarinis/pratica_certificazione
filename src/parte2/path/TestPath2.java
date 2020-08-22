@@ -8,5 +8,8 @@ public class TestPath2 {
         System.out.println(path);
         System.out.println(path.getName(0));
 
+        path = Path.of("/" ,"root","b", "..", "disco_0");
+
+        System.out.println(path.normalize());
     }
 }
