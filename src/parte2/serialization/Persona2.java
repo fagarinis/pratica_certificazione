@@ -2,10 +2,12 @@ package parte2.serialization;
 
 import java.io.*;
 
+// l'interfaccia Externalizable obbliga a fare l'override del write e read
+// mentre Serializable permette solo la possibilità di farne l'override
 public class Persona2 implements Externalizable {
     private String nome;
     private Integer eta;
-    private transient String codiceFiscale; // se transient non viene serializzato
+    private transient String codiceFiscale;
 
     public Persona2() {
     }
