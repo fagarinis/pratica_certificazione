@@ -12,5 +12,9 @@ public class MapTest {
 
         map.compute("Jane", (s1, s2) -> "Hi " + s2);
         System.out.println(map);
+
+        map.computeIfAbsent("Johnson", key -> "oh long " + key);
+        System.out.println("Map after computeIfAbsent");
+        System.out.println(map);
     }
 }
