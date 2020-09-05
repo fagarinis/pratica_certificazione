@@ -6,14 +6,17 @@ abstract class Frutto {
 
 public class ClasseAnonimaTest {
 
-    public static void main(String[] args) {
+    class InnerClass {
+    }
 
-        test1();
+
+    public static void main(String[] args) {
+//        test1();
     }
 
     static void test1() {
 
-         int contaChiamateAGetColore = 0;
+        int contaChiamateAGetColore = 0;
 
         Frutto fruttoAnonimo = new Frutto() {
             String getColore() {

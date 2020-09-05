@@ -11,9 +11,8 @@ public class TestPath {
         System.out.println(path.getName(1)); // b
 
 
-        System.out.println("Resolve siblings----"); // risolve il parte2.path sul parent del primo come se fosse a/ resolve a/c
-        Path path1 = Path.of("a/c");
-        Path path2 = Path.of("a/c");
-        System.out.println(path1.resolveSibling(path2));
+        System.out.println("Resolve siblings----");
+        Path path1 = Path.of("a/c"); Path path2 = Path.of("b/c");
+        System.out.println(path1.resolveSibling(path2)); // resolve this parent path on other path
     }
 }

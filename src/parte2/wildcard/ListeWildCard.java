@@ -15,9 +15,10 @@ public class ListeWildCard {
     }
 
     /*
-        In generale, è raccomandato usare <? extends x> nei parametri di input dei parametri
-        usare <? super x> nei parametri di output
-        non usare wildcard come tipo di ritorno
+        Buone pratiche:
+        - usare <? extends x> nei parametri di input dei parametri
+        - usare <? super x> nei parametri di output
+        - non usare wildcard come tipo di ritorno
     */
     public void metodoGenerico(List<? extends Number> readList, List<? super String> outputList) {
         // ...body

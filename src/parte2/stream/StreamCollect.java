@@ -11,7 +11,8 @@ public class StreamCollect {
         System.out.println(result);
 
 //        collect1Test();
-        collect2Test();
+//        collect2Test();
+//        collect3Test();
 
     }
 
@@ -36,5 +37,14 @@ public class StreamCollect {
 
         System.out.println(stringheConcatenate.length());
         System.out.println(stringheConcatenate);
+    }
+
+    static void collect3Test(){
+        String result = List.of("a", "b")
+                .parallelStream()
+                .collect(String::new, String::concat, (String::concat));
+        // non returna nulla perché String è una classe immutabile ed utilizzare il concat non cambia l'oggetto
+        // String su cui viene chiamato
+        System.out.println(result);
     }
 }
