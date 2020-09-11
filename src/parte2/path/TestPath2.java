@@ -17,5 +17,14 @@ public class TestPath2 {
         // returns how to get to other path from this path
         System.out.println(Path.of("a/b").relativize(Path.of("a/c")));
         // exception if one path is relative and one is absolute
+
+        Path thisPath = Path.of("a/b");
+        Path otherPath = Path.of("a/c");
+
+        System.out.println("resolve");
+        System.out.println(thisPath.resolve(otherPath));
+
+        System.out.println("resolve with other = absolute path");
+        System.out.println(thisPath.resolve(Path.of("/a/c")));
     }
 }
