@@ -1,5 +1,8 @@
 package parte2.generics;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TestGenerics {
     public static void main(String[] args) {
         Bottiglia bottiglia = new Bottiglia();
@@ -14,4 +17,13 @@ public class TestGenerics {
     public static <T> String getParameterClassName(T parameter){
         return parameter.getClass().getSimpleName();
     }
+
+
+    static <T> void testGenerics(List<? extends T> inputList){
+        List<T> list = new ArrayList<>(inputList);
+
+
+        List<? extends Number> listNumber = new ArrayList<Integer>();
+    }
+
 }
