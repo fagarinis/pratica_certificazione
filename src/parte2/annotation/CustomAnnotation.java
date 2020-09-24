@@ -7,4 +7,5 @@ import java.lang.annotation.Target;
 @Target(ElementType.METHOD) // annotation restriction
 @Inherited
 public @interface CustomAnnotation {
+    int x();
 }
